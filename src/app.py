@@ -7,14 +7,15 @@ Rode com: streamlit run src/app.py
 import streamlit as st
 import pandas as pd
 import joblib
-import os
+from pathlib import Path
 
 st.set_page_config(page_title="Assistente Acadêmico", page_icon="📚", layout="centered")
 
 # ------------------------------------------------------------
 # 1. Carregar o modelo treinado
 # ------------------------------------------------------------
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "model", "modelo_risco_academico.pkl")
+PASTA_APP = Path(__file__).resolve().parent
+MODEL_PATH = PASTA_APP / "model" / "modelo_risco_academico.pkl"
 
 @st.cache_resource
 def carregar_modelo():
@@ -39,14 +40,18 @@ st.write(
 
 if not modelo_ok:
     st.error(
-        "Não consegui carregar o modelo treinado. Rode o notebook "
-        "`notebooks/desenvolvimento.ipynb` até o final para gerar o arquivo "
-        "`src/model/modelo_risco_academico.pkl`."
+        "Não foi possível carregar um arquivo interno essencial do aplicativo. "
+        "Tente reinstalar o Assistente de Risco Acadêmico."
     )
-    st.caption(f"Detalhe técnico: {erro_modelo}")
+
+    with st.expander("Detalhes técnicos"):
+        st.code(erro_modelo)
+
     st.stop()
 
 st.divider()
+    
+
 
 # --- Organização da semana (texto livre) ---
 st.subheader("1. Suas demandas da semana")
