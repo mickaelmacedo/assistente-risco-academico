@@ -1,7 +1,28 @@
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-joblib
-streamlit
+# ============================================================
+# Dependências do projeto — Assistente Preditivo de
+# Organização Acadêmica
+# Testado com Python 3.11+ (também funciona em 3.14)
+# ============================================================
+
+# --- Manipulação e análise de dados ---
+pandas>=2.0
+numpy>=1.24
+
+# --- Visualização (usadas no notebook de desenvolvimento) ---
+matplotlib>=3.7
+seaborn>=0.12
+
+# --- Machine Learning ---
+scikit-learn>=1.3
+joblib>=1.3
+
+# --- Ambiente de notebook ---
+jupyter>=1.0
+notebook>=7.0
+
+# --- App de demonstração (demo funcional) ---
+streamlit>=1.30
+
+# --- Download do dataset de Engenharia Informática (opcional,
+#     usado só no notebook de comparação entre cursos) ---
+ucimlrepo>=0.0.7
