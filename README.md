@@ -1,4 +1,4 @@
-# 📚 — Assistente Acadêmica
+# 📚 — Assistente Acadêmico
 
 > Organiza sua semana e avisa, com base em dados reais, quando seu padrão de estudo está te levando à reprovação.
 
@@ -6,12 +6,11 @@
 
 ## 👥 Equipe
 
-| Nome completo | Papel no projeto |
-|---|---|
-| Mickael Lopes de Souza Macedo | [ML,Dado,Front-end] |
-| [Nome 2] | [....] |
-| [Nome 3] | [ex: Dados / EDA] |
-| [Nome 4] | [ex: LLM / Prompt engineering] |
+| Nome completo |  
+| Mickael Lopes de Souza Macedo |  
+| [Nome 2] |  
+| [Nome 3] |  
+| [Nome 4] |  
 
 ---
 
@@ -33,7 +32,7 @@ O aluno digita livremente suas demandas da semana (ex: *"Ler o artigo de Redes p
 2. **Avalia risco** — cruza o padrão de estudo do aluno (tempo dedicado, faltas, histórico) com um modelo preditivo treinado em dados reais de desempenho acadêmico, sinalizando risco por matéria.
 3. **Recomenda** — um LLM traduz o sinal de risco em orientação prática e personalizada (ex: *"seu tempo de estudo em Cálculo está bem abaixo do padrão associado a bons resultados — considere realocar horas de [matéria X]"*), em vez de conselhos genéricos como "estude mais".
 
-**[Inserir aqui print ou GIF da demo rodando]**
+** https://youtu.be/Lrvl19ucZik **
 
 ---
 
@@ -159,8 +158,7 @@ Mais detalhes sobre ética e limitações em `relatorio/relatorio_tecnico.pdf`, 
 ---
 
 ## 🎥 Vídeo Demo (Backup)
-
-[Link do vídeo de 2-3 min mostrando a demo funcionando]
+(https://youtu.be/Lrvl19ucZik)
 
 ---
 
