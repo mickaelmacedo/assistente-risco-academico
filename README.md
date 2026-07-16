@@ -8,8 +8,8 @@
 
 | Nome completo | Papel no projeto |
 |---|---|
-| [Nome 1] | [ex: Modelagem / ML] |
-| [Nome 2] | [ex: Front-end / Streamlit] |
+| Mickael Lopes de Souza Macedo | [ML,Dado,Front-end] |
+| [Nome 2] | [....] |
 | [Nome 3] | [ex: Dados / EDA] |
 | [Nome 4] | [ex: LLM / Prompt engineering] |
 
