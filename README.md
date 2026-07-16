@@ -1,4 +1,4 @@
-# 📚 [Nome do Projeto] — Assistente Preditivo de Organização Acadêmica
+# 📚 — Assistente Acadêmica
 
 > Organiza sua semana e avisa, com base em dados reais, quando seu padrão de estudo está te levando à reprovação.
 
