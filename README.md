@@ -64,25 +64,78 @@ Modelo(s) treinado(s) com base no **Student Performance Dataset** (Cortez & Silv
 
 ## ⚙️ Como Rodar
 
+### Pré-requisitos
+
+- **Python 3.11 ou superior** ([baixar aqui](https://www.python.org/downloads/))
+- **Git** (para clonar o repositório)
+- Conexão com a internet (para baixar as dependências e o dataset)
+
+### 1. Clonar o repositório
+
 ```bash
-# 1. Clonar o repositório
-git clone [link-do-repo]
-cd meu-projeto-ia
+git clone https://github.com/mickaelmacedo/assistente-risco-academico.git
+cd assistente-risco-academico
+```
 
-# 2. Criar ambiente virtual (recomendado)
+### 2. Criar e ativar o ambiente virtual
+
+```bash
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+```
 
-# 3. Instalar dependências
+Ativar:
+
+```bash
+# Windows
+venv\Scripts\activate
+
+# Mac/Linux
+source venv/bin/activate
+```
+
+### 3. Instalar as dependências
+
+```bash
 pip install -r requirements.txt
+```
 
-# 4. Rodar a aplicação
+### 4. Baixar os dados
+
+Baixe os dois arquivos abaixo e salve dentro da pasta `data/`:
+
+- [student-mat.csv](https://raw.githubusercontent.com/arunk13/MSDA-Assignments/master/IS607Fall2015/Assignment3/student-mat.csv)
+- [student-por.csv](https://raw.githubusercontent.com/arunk13/MSDA-Assignments/master/IS607Fall2015/Assignment3/student-por.csv)
+
+Fonte original: [Student Performance Dataset — UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/320/student+performance)
+
+### 5. Rodar o notebook (treina o modelo)
+
+```bash
+jupyter notebook notebooks/desenvolvimento.ipynb
+```
+
+Rode todas as células em ordem (**Executar Tudo** / *Run All*). Isso gera o arquivo `src/model/modelo_risco_academico.pkl`, necessário para o app funcionar.
+
+> Alternativa: se estiver usando o VS Code, abra o arquivo `.ipynb` direto por lá — ele tem suporte nativo a notebooks (extensões **Python** e **Jupyter**).
+
+### 6. Rodar o app de demonstração
+
+Com o modelo já treinado (passo anterior), rode:
+
+```bash
 streamlit run src/app.py
 ```
 
-> Testado em máquina limpa em [data]. Se algo não funcionar, abra uma issue ou consulte `notebooks/desenvolvimento.ipynb` para reproduzir o treino do modelo do zero.
+O navegador deve abrir automaticamente em `http://localhost:8501`. Se não abrir, copie e cole esse endereço manualmente.
 
----
+### Problemas comuns
+
+| Erro | Causa provável | Solução |
+|---|---|---|
+| `ModuleNotFoundError` | Ambiente virtual não ativado, ou dependência faltando | Confirme que o `venv` está ativo (aparece `(venv)` no terminal) e rode `pip install -r requirements.txt` de novo |
+| `FileNotFoundError` nos dados | CSVs não estão em `data/` | Revise o passo 4 |
+| App carrega mas mostra erro de modelo | Notebook não foi executado até o fim | Rode o passo 5 completo antes do passo 6 |
+
 
 ## 🤖 Uso de IA no Desenvolvimento
 
